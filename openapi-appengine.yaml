@@ -1,0 +1,51 @@
+swagger: '2.0'
+info:
+  description: This is a API Spec for testing
+  version: "1"
+  title: Country Api
+  contact:
+    email: wlyem1223@gmail.com
+host: "ninth-park-223107.appspot.com"
+schemes:
+ - https
+ - http
+tags:
+- name: developers
+  description: Operations available to regular developers
+
+paths:
+  /api/{country}:
+    get:
+      tags:
+      - developers
+      summary: Retrieve User Country
+      operationId: Get Country
+      description: Get User Country Information
+      consumes:
+      - application/json
+      parameters:
+        - in: path
+          name: country
+          type: string
+          description: user country
+          required: true
+      responses:
+        200:
+          description: User Found
+          schema:
+            $ref: '#/definitions/UserStatusResponse'
+
+definitions:
+  UserStatusResponse:
+    type: object
+    properties:
+      country: 
+        type: string
+        example: Malaysia
+      independence: 
+        type: boolean
+        example: true
+      
+      
+
+

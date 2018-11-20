@@ -15,7 +15,7 @@ app.get('/api/:country',(req,res)=>{
 });
 
 app.get('/',(req,res)=>{
-    res.send('Hello World');
+    res.json({name:"Testing"});
 });
 
 
