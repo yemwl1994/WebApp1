@@ -7,7 +7,7 @@ app.use(express.json());
 
 app.get('/',(req,res)=>{
     res.send('Hello World');
-})
+});
 app.get('/api/:country',(req,res)=>{
     var country =  req.params["country"];
     var capitalizeCount = country.charAt(0).toUpperCase() + country.substr(1);
